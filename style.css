@@ -1,0 +1,113 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    background-color: white;
+}
+
+#backpage {
+    background-image: url('backgound.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    position: fixed; /* Ensure it stays in place */
+    top: 0;
+    left: 0;
+    width: 105%; /* Adjusted to fit the screen */
+    height: 100%; /* Cover full height */
+    z-index: -1; /* Ensure it's behind content */
+}
+
+#first {
+    background-color: #5A5A5A;
+    min-height: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+#second {
+    background-color: #E5D4CE;
+    position: relative;
+    z-index: 4;
+    min-height: 60px;
+}
+
+#icons1 {
+    margin-left: 30px;
+}
+
+#home1, #about1, #background1, #book1, #contact1 {
+    background-image: linear-gradient(to left, rgba(28, 28, 28, 0), #434343);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2; /* Ensure it's above the background */
+}
+
+.calendly-inline-widget {
+    width: 100%; /* Ensure the widget takes up full width */
+    height: 400px; /* Ensure there's enough height for the widget */
+    z-index: 3; /* Ensure it's above other elements */
+}
+
+.morph {
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%); 
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 2; /* Ensure it's above the background */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.morph.show {
+    opacity: 1;
+    transform: translateX(0); 
+    visibility: visible;
+    z-index: 3;
+}
+
+.morph.hide {
+    opacity: 0;
+    transform: translateX(1);
+    visibility: hidden;
+}
+
+/*
+.morph {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 1; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.morph.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.morph.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+*/
